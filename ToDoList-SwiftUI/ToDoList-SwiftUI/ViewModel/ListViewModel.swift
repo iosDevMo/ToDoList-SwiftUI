@@ -50,10 +50,8 @@ import CoreData
     
     func save(){
         items.removeAll()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1){
-            self.manager.save()
-            self.getItem()
-        }
+        manager.save()
+        getItem()
         
     }
 }

@@ -16,6 +16,7 @@
 		CDF3E31A2BB244EE00FDA0D8 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDF3E3182BB244EE00FDA0D8 /* DataModel.xcdatamodeld */; };
 		CDF3E31C2BB245B900FDA0D8 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3E31B2BB245B900FDA0D8 /* ListViewModel.swift */; };
 		CDF3E31E2BB245D500FDA0D8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3E31D2BB245D500FDA0D8 /* DataManager.swift */; };
+		CDF3E3202BB4D40100FDA0D8 /* NoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3E31F2BB4D40100FDA0D8 /* NoItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		CDF3E3192BB244EE00FDA0D8 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		CDF3E31B2BB245B900FDA0D8 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		CDF3E31D2BB245D500FDA0D8 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		CDF3E31F2BB4D40100FDA0D8 /* NoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				CDF3E3052BB232CD00FDA0D8 /* ListView.swift */,
 				CDF3E3142BB2368300FDA0D8 /* ListRowView.swift */,
 				CDF3E3162BB23B4400FDA0D8 /* AddView.swift */,
+				CDF3E31F2BB4D40100FDA0D8 /* NoItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			files = (
 				CDF3E3172BB23B4400FDA0D8 /* AddView.swift in Sources */,
 				CDF3E31A2BB244EE00FDA0D8 /* DataModel.xcdatamodeld in Sources */,
+				CDF3E3202BB4D40100FDA0D8 /* NoItemView.swift in Sources */,
 				CDF3E31C2BB245B900FDA0D8 /* ListViewModel.swift in Sources */,
 				CDF3E31E2BB245D500FDA0D8 /* DataManager.swift in Sources */,
 				CDF3E3062BB232CD00FDA0D8 /* ListView.swift in Sources */,
