@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct AddView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    @State var vm: ListViewModel
     @State var textField: String = ""
+    @State var alertTitle: String = ""
+    @State var showAlert: Bool = false
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -18,7 +24,15 @@ struct AddView: View {
                     .background(Color(.systemGray2).opacity(0.3))
                     .cornerRadius(10)
                 Button {
-                    //
+                    if textField.count > 3 {
+                        vm.addItem(title: textField)
+                        textField = ""
+                        presentationMode.wrappedValue.dismiss()
+                    }else{
+                        alertTitle = "Your new ToDo Item must at least 3 characters🤓"
+                        showAlert.toggle()
+                    }
+                    
                 } label: {
                     Text("Save").textCase(.uppercase)
                         .font(.headline)
@@ -34,12 +48,15 @@ struct AddView: View {
             .padding()
         }
         .navigationTitle("Add an Item 🖋️")
+        .alert(isPresented: $showAlert, content: {
+            Alert(title: Text(alertTitle))
+        })
     }
 }
 
 #Preview {
     NavigationStack{
-        AddView()
+        AddView(vm: ListViewModel())
     }
     
 }
