@@ -9,8 +9,8 @@ import SwiftUI
 
 struct AddView: View {
     
-    @Environment(\.presentationMode) var presentationMode
-    @State var vm: ListViewModel
+    @Environment(\.dismiss) var dismiss
+    @Bindable var vm: ListViewModel
     @State var textField: String = ""
     @State var alertTitle: String = ""
     @State var showAlert: Bool = false
@@ -27,7 +27,7 @@ struct AddView: View {
                     if textField.count > 3 {
                         vm.addItem(title: textField)
                         textField = ""
-                        presentationMode.wrappedValue.dismiss()
+                            dismiss()
                     }else{
                         alertTitle = "Your new ToDo Item must at least 3 characters🤓"
                         showAlert.toggle()
@@ -57,6 +57,5 @@ struct AddView: View {
 #Preview {
     NavigationStack{
         AddView(vm: ListViewModel())
-    }
-    
+    }    
 }

@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ListView: View {
     
-    @State private var vm = ListViewModel()
+    @State private var vm: ListViewModel = ListViewModel()
     
     var body: some View {
         ZStack{
             if vm.items.isEmpty{
                 NoItemView(vm: vm)
+                    .transition(AnyTransition(.opacity.animation(.easeIn)))
             }else{
                 List {
                     ForEach(vm.items){ item in
@@ -40,6 +41,5 @@ struct ListView: View {
 #Preview {
     NavigationStack{
         ListView()
-    }
-    
+    }    
 }

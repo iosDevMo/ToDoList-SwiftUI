@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CDDD94FC2BB6312300DADB11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDDD94FB2BB6312300DADB11 /* LaunchScreen.storyboard */; };
 		CDF3E3042BB232CD00FDA0D8 /* ToDoList_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3E3032BB232CD00FDA0D8 /* ToDoList_SwiftUIApp.swift */; };
 		CDF3E3062BB232CD00FDA0D8 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3E3052BB232CD00FDA0D8 /* ListView.swift */; };
 		CDF3E3082BB232CF00FDA0D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF3E3072BB232CF00FDA0D8 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CDDD94FB2BB6312300DADB11 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDF3E3002BB232CD00FDA0D8 /* ToDoList-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDoList-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF3E3032BB232CD00FDA0D8 /* ToDoList_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList_SwiftUIApp.swift; sourceTree = "<group>"; };
 		CDF3E3052BB232CD00FDA0D8 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				CDF3E3142BB2368300FDA0D8 /* ListRowView.swift */,
 				CDF3E3162BB23B4400FDA0D8 /* AddView.swift */,
 				CDF3E31F2BB4D40100FDA0D8 /* NoItemView.swift */,
+				CDDD94FB2BB6312300DADB11 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDDD94FC2BB6312300DADB11 /* LaunchScreen.storyboard in Resources */,
 				CDF3E30B2BB232CF00FDA0D8 /* Preview Assets.xcassets in Resources */,
 				CDF3E3082BB232CF00FDA0D8 /* Assets.xcassets in Resources */,
 			);
@@ -325,6 +329,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -352,6 +357,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

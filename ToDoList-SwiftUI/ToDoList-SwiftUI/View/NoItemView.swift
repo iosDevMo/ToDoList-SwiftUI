@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NoItemView: View {
-    @State var vm: ListViewModel
+    @Bindable var vm: ListViewModel
     @State var animate: Bool = false
     
     var body: some View {
@@ -62,5 +62,4 @@ struct NoItemView: View {
     NavigationStack{
         NoItemView(vm: ListViewModel())
     }
-    
 }
