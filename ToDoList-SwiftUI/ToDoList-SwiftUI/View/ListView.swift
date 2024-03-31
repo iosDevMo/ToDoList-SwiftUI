@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ListView: View {
     
-    @State private var vm: ListViewModel = ListViewModel()
+    @Bindable var vm: ListViewModel
+    var selectedCategory: CategoryEntity?
     
     var body: some View {
         ZStack{
@@ -32,14 +33,17 @@ struct ListView: View {
                 .listStyle(.plain)
             }
         }
-        .navigationTitle("ToDo List📝")
+        .navigationTitle("\(selectedCategory?.name ?? "") List📝")
         .navigationBarItems(leading: EditButton(),
                             trailing: NavigationLink("Add", destination: {AddView(vm: vm)}))
+        .onAppear(perform: {
+            vm.selectedCategory = selectedCategory
+        })
     }
 }
 
 #Preview {
     NavigationStack{
-        ListView()
-    }    
+        ListView(vm: ListViewModel())
+    }
 }

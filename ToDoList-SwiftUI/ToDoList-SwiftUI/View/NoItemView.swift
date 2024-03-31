@@ -17,7 +17,7 @@ struct NoItemView: View {
                 Text("There are No Items!")
                     .font(.title)
                     .fontWeight(.semibold)
-                Text("Click the Add button and add abunch of items to your to do list.")
+                Text("Click the Add button and add abunch of Items to your to do list.")
                     .padding(.bottom, 20)
                 NavigationLink {
                     AddView(vm: vm)

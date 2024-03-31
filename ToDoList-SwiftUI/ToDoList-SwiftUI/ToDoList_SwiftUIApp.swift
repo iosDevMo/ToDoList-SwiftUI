@@ -12,7 +12,7 @@ struct ToDoList_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack{
-                ListView()
+                CategoryView()
             }
             
             
