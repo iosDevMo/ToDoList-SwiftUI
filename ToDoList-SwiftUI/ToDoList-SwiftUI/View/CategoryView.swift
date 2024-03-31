@@ -46,10 +46,12 @@ struct CategoryView: View {
         .alert("Add new category", isPresented: $showAlert) {
             TextField("Enter new category", text: $textField)
             Button("Save") {
-                self.vm.addCategory(name: textField)
-                textField = ""
+                if !textField.isEmpty{
+                    self.vm.addCategory(name: textField)
+                    textField = ""
+                }else{return}
             }
-            Button("Cancle", role: .cancel, action: {})
+            Button("Cancle", role: .cancel, action: {textField = ""})
         }
     }
 }
