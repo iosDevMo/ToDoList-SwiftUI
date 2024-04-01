@@ -10,8 +10,9 @@ import SwiftUI
 struct CategoryView: View {
     @State var vm: ListViewModel = ListViewModel()
     @State var textField: String = ""
-//    @State var alertTitle: String = ""
     @State var showAlert: Bool = false
+    @State var renameAlert: Bool = false
+    
     var body: some View {
         ZStack{
             if vm.categories.isEmpty{
@@ -31,6 +32,24 @@ struct CategoryView: View {
                         NavigationLink(category.name!) {
                             ListView(vm: vm, selectedCategory: category)
                         }
+                        .swipeActions(edge: .leading, allowsFullSwipe: true) {
+                            Button("Rename") {
+                                renameAlert.toggle()
+                            }
+                            .tint(.green)
+                        }
+                        .alert("Add new category name", isPresented: $renameAlert) {
+                            TextField("Enter new category name", text: $textField)
+                            Button("Save") {
+                                if !textField.isEmpty{
+                                    category.name = textField
+                                    self.vm.save()
+                                    textField = ""
+                                }else{return}
+                            }
+                            Button("Cancle", role: .cancel, action: {textField = ""})
+                        }
+                        
                     }
                     .onDelete(perform: vm.deleteCategory)
                 }

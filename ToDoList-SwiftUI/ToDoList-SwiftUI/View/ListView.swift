@@ -34,8 +34,7 @@ struct ListView: View {
             }
         }
         .navigationTitle("\(selectedCategory?.name ?? "") List📝")
-        .navigationBarItems(leading: EditButton(),
-                            trailing: NavigationLink("Add", destination: {AddView(vm: vm)}))
+        .navigationBarItems(trailing: NavigationLink("Add", destination: {AddView(vm: vm)}))
         .onAppear(perform: {
             vm.selectedCategory = selectedCategory
         })
