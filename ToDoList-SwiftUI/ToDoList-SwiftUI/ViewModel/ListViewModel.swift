@@ -85,9 +85,9 @@ import CoreData
     }
     
     func save(){
-        manager.save()
         categories.removeAll()
         items.removeAll()
+        manager.save()
         getCategory()
         getItem()
     }
